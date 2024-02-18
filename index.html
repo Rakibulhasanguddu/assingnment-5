@@ -7,20 +7,9 @@
     
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
 
-<style>
-.sit{
-  border: 2px solid aliceblue;
-  padding: 15px;
-  border-radius: 15px;
-  background-color: #F7F8F8;
-  font-weight: 700;
-}
-.num{
-  padding: 15px;
-  font-weight: 700;
-}
-</style>
+
 </head>
 <body class="container mx-auto">
     <header >
@@ -65,7 +54,7 @@
     <div class="bg-[url('./images/banner.png')] bg-no-repeat h-[550px] w-[1170px] ml-48 pt-20"  >
         <h1 class="text-center text-5xl font-extrabold mb-8 text-white">End-To-End Travel With <br class="">  <span class="text-[#1DD100]" > Smart Poribohon</span> </h1>
         <p class="text-center w-[690px] ml-64 mb-20 text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-        <button class="btn btn-success ml-[550px] bg-[#1DD100] ">Buy Ticket</button>
+       <a href="#ticketPage"><button id="btn1" class="btn btn-success ml-[550px] bg-[#1DD100]  " >Buy Ticket</button></a> 
     </div>
 
 </section>
@@ -130,7 +119,7 @@
 
 </section>
                              <!-- main -->
-<section>
+<section id="ticketPage">
 <div class="mt-24">
     <h1 class="text-4xl font-bold text-center">Smart Paribahon</h1>
     <p class="text-center mt-5 font-bold">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
@@ -145,13 +134,13 @@
 
 <div class="flex gap-5">
 <div><img src="images/bus-logo.png" alt="" srcset=""></div>
-<div><h1 class="text-3xl font-bold">greeen line</h1>
-  <p>ac bus</p>
+<div><h1 class="text-3xl font-bold">Skyline Paraibahan</h1>
+  <p>ac bus <span id="sitclass">Economic</span></p>
 </div>
 </div>
 
 <div>
-  <button class="btn btn-outline btn-accent">40 seat left</button>
+  <button  class="btn btn-outline btn-accent"> <span id="substracSeat" >40 seat left</span></button>
 </div>
 </div>
 <!-- </div> -->
@@ -180,7 +169,7 @@
                            <!-- 3 -->
 <div >
   <img src="images/fare.png" alt="">
-  <h1 class="text-2xl font-bold mt-2">550 Taka</h1>
+  <h1 id="price" class="text-2xl font-bold mt-2">550 Taka</h1>
   <h2 class="text-xl">per seat</h2>
 </div>
 </div>
@@ -218,15 +207,15 @@
                         
                         <div class="num">A</div>
                         
-                        <div class="sit">A1</div>
-                        <div class="sit">A2</div>
-                        <div class="sit">A3</div>
-                        <div class="sit">A4</div>
+                        <div id="A1" class="sit">A1</div>
+                        <div id="A2" class="sit">A2</div>
+                        <div id="A3" class="sit">A3</div>
+                        <div id="A4" class="sit">A4</div>
                         <div class="num">B</div>
-                        <div class="sit">B1</div>
-                        <div class="sit">B2</div>
-                        <div class="sit">B3</div>
-                        <div class="sit">B4</div>
+                        <div id="B1" class="sit">B1</div>
+                        <div id="B2" class="sit">B2</div>
+                        <div id="B3" class="sit">B3</div>
+                        <div id="B4" class="sit">B4</div>
                         <div class="num">C</div>
                         <div class="sit">C1</div>
                         <div class="sit">C2</div>
@@ -264,31 +253,32 @@
                     <h1 class="text-2xl font-bold bold ml-5 mb-3">select Your Seat</h1>
 
                     <div class="flex gap-16 ">
-                      <p class="font-bold">seat <Span>0</Span></p>
+                      <p class="font-bold">seat <Span id="perSeat">0</Span></p>
                       <p class="font-bold">class</p>
                       <p class="font-bold mb-3" >price</p>
                     </div>
 
                     <hr>
 
-                    <div class="flex gap-16 mt-5  ">
-                      <p>C2</p>
-                      <p>Economoy</p>
-                      <p>550</p>
-                    </div>
+                    <!-- <div  class="flex gap-16 mt-5  ">
+                     
+                      
+                    </div> -->
 
                     
 
                     <div class="flex gap-16 mt-5 ">
-                      <p>C2</p>
-                      <p>Economoy</p>
-                      <p class="mb-3">550</p>
+                    
+                      <ul id="priceContainer">
+                      
+                      </ul>
+                      
                     </div>
                       <hr>
 
                       <div class="flex gap-28  ">
                         <p class="font-bold">Total Price</p>
-                        <p class="font-bold">BDT 1100</p>
+                        <p class="font-bold">BDT <span id="totalPrice">0</span></p>
                    </div>
 
                    <div class="flex mt-8">
@@ -324,7 +314,7 @@
                   </div>
 
 
-
+                </section>
 
         
                
@@ -332,11 +322,21 @@
 
 
                                                
-</section>
+
 
                                              <!-- seat -->
 
+<section class="hidden">
+  <div class="w-[720px] h-[480px] bg-gray-300 mt-36 ml-96">
+<img class="ml-80 pt-20" src="images/success.png" alt="">
+<h1 class="font-bold text-green-600 text-2xl text-center">Success</h1>
+<p class="font-bold text-center">Thank you for Booking Our Bus Seats. 
+  We are working hard to find the best service and deals for you. 
+  Shortly you will find a confirmation in your email.</p>
 
+  <button class="btn btn-success ml-80 mt-5">Continue</button>
+  </div>
+</section>
 
 
 
@@ -361,4 +361,5 @@
 
 
 </body>
+<script src="index.js"></script>
 </html>
