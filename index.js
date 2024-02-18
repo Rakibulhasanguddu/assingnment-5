@@ -1,4 +1,5 @@
 const seat=document.getElementsByClassName('sit')
+
 let count=0;
 let counts=40;
 for(const sits of seat){
@@ -7,11 +8,11 @@ for(const sits of seat){
         document.getElementById('perSeat').innerText=count;
           counts=counts-1;
         document.getElementById('substracSeat').innerText=counts;
-
+          
         
     const ticketPrice=document.getElementById('price').innerText
     const busquality=document.getElementById('sitclass').innerText
-    console.log(busquality)
+    // console.log(busquality)
    
     const Pricecontainers=document.getElementById('priceContainer');
     const li1=document.createElement('li')
@@ -28,12 +29,19 @@ for(const sits of seat){
     
 
 const totalPrice=document.getElementById('totalPrice').innerText
-console.log(typeof totalPrice)
+// console.log(typeof totalPrice)
 const convertTotalPrice=parseInt(totalPrice)
    
 document.getElementById('totalPrice').innerText= convertTotalPrice+parseInt(ticketPrice)
+const sum = convertTotalPrice+parseInt(ticketPrice)
 
-    
+    const grandtotal=document.getElementById('grandtotal').innerText
+
+    const convertGrandtotal=parseInt(grandtotal)
+
+    const  sum2= convertGrandtotal+parseInt(ticketPrice);
+    console.log(sum2)
+    document.getElementById('grandtotal').innerText=sum2
     
 
 //  setBg('A1');
