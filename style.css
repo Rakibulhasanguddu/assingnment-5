@@ -4,12 +4,17 @@
     border-radius: 15px;
     background-color: #F7F8F8;
     font-weight: 700;
+    height: 60px;
   }
   .num{
     padding: 15px;
     font-weight: 700;
   }
   li{
+   
     display: flex;
-    gap: 20px;
+    gap: 10px;
+   
+   
   }
+  

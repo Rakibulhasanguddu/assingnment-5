@@ -8,7 +8,7 @@ for(const sits of seat){
         document.getElementById('perSeat').innerText=count;
           counts=counts-1;
         document.getElementById('substracSeat').innerText=counts;
-          if(seat>=5){
+          if(sits>=5){
             alert('one person buy 4 ticket')
             return;
           }
@@ -110,7 +110,7 @@ applyBtn.addEventListener('click', function(){
    const discound=document.getElementById('grandtotal')
    console.log(typeof discound)
    const convertDiscount=parseFloat(discound)
-   const discountprice=totalPrice*0.2;
+   const discountprice=totalPrice*0.15;
    discound.innerText=discountprice
   
     // const grandtotal=document.getElementById('grandtotal').innerText
@@ -121,6 +121,13 @@ applyBtn.addEventListener('click', function(){
     // console.log(discound)
     // document.getElementById('grandtotal').innerText=discound
 
+  }
+  else if(cuponCode==="Couple20"){
+    const discound=document.getElementById('grandtotal')
+   console.log(typeof discound)
+   const convertDiscount=parseFloat(discound)
+   const discountprice=totalPrice*0.2;
+   discound.innerText=discountprice
   }
   else{
     alert('Its Wrong Cupon')
