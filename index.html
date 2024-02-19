@@ -238,11 +238,11 @@
                         <div class="sit">F2</div>
                         <div class="sit">F3</div>
                         <div class="sit">F4</div>
-                        <div class="num">G</div>
+                        <!-- <div class="num">G</div>
                         <div class="sit">G1</div>
                         <div class="sit">G2</div>
                         <div class="sit">G3</div>
-                        <div class="sit">G4</div>
+                        <div class="sit">G4</div> -->
                         
                      
                         
@@ -282,8 +282,8 @@
                    </div>
 
                    <div class="flex mt-8">
-                   <input type="text" placeholder="have Any Cuppon?" class="input  w-[280px] " />
-                   <button class="bg-green-500 p-3 relative left-[-65px] rounded-xl font-bold">Apply</button>
+                   <input id="inputs" type="text" placeholder="have Any Cuppon?" class="input  w-[280px] " />
+                   <button id="bttn" class="bg-green-500 p-3 relative left-[-65px]  rounded-xl font-bold"  >Apply</button>
                   </div>
 
                   <div class="flex gap-28 mt-6  ">
@@ -303,7 +303,28 @@
                 <h1 class="font-bold mt-6">Email Id</h1>
                 <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs mt-3" />
                </div>
-               <button class="w-full border-2 border-green-600 bg-green-600 mt-7 h-12 rounded-xl font-bold">Next</button>
+               <!-- <button class="w-full border-2 border-green-600 bg-green-600 mt-7 h-12 rounded-xl font-bold"></button> -->
+
+
+<!-- The button to open modal -->
+<label for="my_modal_7" class="btn bg-green-600 mt-6 w-[320px]">Next</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my_modal_7" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    
+   <img class="ml-44" src="images/success.png" alt="">
+   <h3 class="text-lg font-bold text-green-600 text-center">Success</h3>
+   <p class="font-bold text-center">Thank you for Booking Our Bus Seats. 
+    We are working hard to find the best service and deals for you. 
+    Shortly you will find a confirmation in your email.</p>
+    <button class="btn btn-success ml-48 mt-5">Continue</button>
+  </div>
+  <label class="modal-backdrop" for="my_modal_7">Close</label>
+</div>
+
+
 
                <div class="flex gap-5 mt-6">
                 <p><u>Terms and Conditions</u></p>
@@ -326,16 +347,40 @@
 
                                              <!-- seat -->
 
-<section class="hidden">
-  <div class="w-[720px] h-[480px] bg-gray-300 mt-36 ml-96">
-<img class="ml-80 pt-20" src="images/success.png" alt="">
-<h1 class="font-bold text-green-600 text-2xl text-center">Success</h1>
-<p class="font-bold text-center">Thank you for Booking Our Bus Seats. 
-  We are working hard to find the best service and deals for you. 
-  Shortly you will find a confirmation in your email.</p>
+<!-- <section class="">
 
-  <button class="btn btn-success ml-80 mt-5">Continue</button>
+
+ The button to open modal
+ <label for="my_modal_7" class="btn">open modal</label>
+
+Put this part before </body> tag 
+<input type="checkbox" id="my_modal_7" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    
+   <img class="ml-44" src="images/success.png" alt="">
+   <h3 class="text-lg font-bold text-green-600 text-center">Success</h3>
+   <p class="font-bold text-center">Thank you for Booking Our Bus Seats. 
+    We are working hard to find the best service and deals for you. 
+    Shortly you will find a confirmation in your email.</p>
+    <button class="btn btn-success ml-48 mt-5">Continue</button>
   </div>
+  <label class="modal-backdrop" for="my_modal_7">Close</label>
+</div>
+  -->
+
+
+
+
+  <!-- <div class="w-[720px] h-[480px] bg-gray-300 mt-36 ml-96">
+    <img class="ml-80 pt-20" src="images/success.png" alt="">
+    <h1 class="font-bold text-green-600 text-2xl text-center">Success</h1>
+    <p class="font-bold text-center">Thank you for Booking Our Bus Seats. 
+      We are working hard to find the best service and deals for you. 
+      Shortly you will find a confirmation in your email.</p>
+    
+      <button class="btn btn-success ml-80 mt-5">Continue</button>
+      </div> -->
 </section>
 
 

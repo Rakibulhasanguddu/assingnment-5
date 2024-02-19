@@ -8,7 +8,10 @@ for(const sits of seat){
         document.getElementById('perSeat').innerText=count;
           counts=counts-1;
         document.getElementById('substracSeat').innerText=counts;
-          
+          if(seat>=5){
+            alert('one person buy 4 ticket')
+            return;
+          }
         
     const ticketPrice=document.getElementById('price').innerText
     const busquality=document.getElementById('sitclass').innerText
@@ -35,13 +38,13 @@ const convertTotalPrice=parseInt(totalPrice)
 document.getElementById('totalPrice').innerText= convertTotalPrice+parseInt(ticketPrice)
 const sum = convertTotalPrice+parseInt(ticketPrice)
 
-    const grandtotal=document.getElementById('grandtotal').innerText
+    // const grandtotal=document.getElementById('grandtotal').innerText
 
-    const convertGrandtotal=parseInt(grandtotal)
+    // const convertGrandtotal=parseInt(grandtotal)
 
-    const  sum2= convertGrandtotal+parseInt(ticketPrice);
-    console.log(sum2)
-    document.getElementById('grandtotal').innerText=sum2
+    // const  sum2= convertGrandtotal+parseInt(ticketPrice);
+    // console.log(sum2)
+    // document.getElementById('grandtotal').innerText=sum2
     
 
 //  setBg('A1');
@@ -49,6 +52,7 @@ const sum = convertTotalPrice+parseInt(ticketPrice)
  
     });
 }
+
 
 
 
@@ -93,3 +97,32 @@ setBg7.addEventListener('click',function (){
 // function setBg(id){
 //   document.getElementById(id).style.backgroundColor='green'
 // }
+
+const applyBtn=document.getElementById('bttn')
+
+applyBtn.addEventListener('click', function(){
+ 
+  const inputFeild=document.getElementById('inputs').value
+  const cuponCode=inputFeild.split(" ").join('').toUpperCase()
+  
+  if(cuponCode==="NEW15"){
+
+   const discound=document.getElementById('grandtotal')
+   console.log(typeof discound)
+   const convertDiscount=parseFloat(discound)
+   const discountprice=totalPrice*0.2;
+   discound.innerText=discountprice
+  
+    // const grandtotal=document.getElementById('grandtotal').innerText
+
+    // const convertGrandtotal=parseInt(grandtotal)
+
+    // const  discound= totalPrice*0.2;
+    // console.log(discound)
+    // document.getElementById('grandtotal').innerText=discound
+
+  }
+  else{
+    alert('Its Wrong Cupon')
+  }
+})
